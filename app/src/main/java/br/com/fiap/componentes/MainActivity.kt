@@ -10,16 +10,23 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var campo1: EditText
     lateinit var botao: Button
+    lateinit var campo2: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         campo1 = findViewById(R.id.editText)
+        campo2 = findViewById(R.id.editText)
         botao = findViewById(R.id.button)
 
         botao.setOnClickListener{
+
+            var campoDoNome = campo1.text.toString()
+            var campoDoTelefone = campo2.text.toString()
+            var Ratingbar = ratingBar.rating.toString()
+
             Toast.makeText(applicationContext,
-                    campo1.text.toString(),
+                    "nome"+campoDoNome+"\nnúmero"+campoDoTelefone+"\nseu rating"+Ratingbar,
                     Toast.LENGTH_LONG).show()
         }
         ratingBar.setOnRatingBarChangeListener{
