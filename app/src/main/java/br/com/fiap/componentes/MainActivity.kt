@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             var Ratingbar = ratingBar.rating.toString()
 
             Toast.makeText(applicationContext,
-                    "nome"+campoDoNome+"\nnúmero"+campoDoTelefone+"\nseu rating"+Ratingbar,
+                    "nome: "+campoDoNome+"\nnúmero: "+campoDoTelefone+"\nseu rating: "+Ratingbar,
                     Toast.LENGTH_LONG).show()
         }
         ratingBar.setOnRatingBarChangeListener{
